@@ -4,7 +4,7 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', nome="Pedro", sobrenome="Felipe")
+    return render_template('index.html', nome="Pedroa", sobrenome="Felipe")
 @app.route('/outro')       
 def outro():
     return '''
