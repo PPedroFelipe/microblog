@@ -1,6 +1,16 @@
+from flask import render_template
 from app import app
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World!"
+    return render_template('index.html', nome="Pedro", sobrenome="Felipe")
+@app.route('/outro')       
+def outro():
+    return '''
+    <html>
+        <body>
+            <h1>outro</h1>
+        </body>
+    </html>
+    '''       
