@@ -4,13 +4,15 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', nome="Pedro", sobrenome="Felipe")
-@app.route('/outro')       
-def outro():
-    return '''
-    <html>
-        <body>
-            <h1>outro</h1>
-        </body>
-    </html>
-    '''       
+
+    usuario = {"nome": "Pedro", "sobrenome": "Felipe"}
+
+    return render_template('index.html', usuario = usuario, titulo = 'Página inicial')
+
+@app.route('/contato')
+def contato():
+    return render_template('contato.html', titulo='Microblog - contato')
+
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html', titulo='Microblog - sobre')
